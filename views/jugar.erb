@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ingresar datos</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid h-100 w-100 d-flex">
+        <div class="container">
+          <h1 class="display-4">Ingresar datos</h1>
+        </div>
+    </div>
+    <form class="form-group" method="post" action="/resultado">
+    <div class="container">
+      <h2>Ingresar dimensiones del terreno</h2>
+      <label>Cantidad de filas</label>
+      <input type="number" id='filas' name='filas'>
+      <br>
+      <label>Cantidad de columnas</label>
+      <input type="number" id='cols' name='cols'>
+      <br>
+      <h2>Ingresar posicion inicial</h2>
+      <label>Posicio X</label>
+      <input type= "number" id ='posicionX' name ='posicionX'>
+      <br>
+      <label>Posicion Y</label>
+      <input type "number" id ='posicionY' name ='posicionY'>
+      <br>
+      <label>Sentido</label>
+          <select id ='sentido' name ='sentido'>
+            <option value="N">Norte</option>
+            <option value="S">Sur</option>
+            <option value="E">Este</option>
+            <option value="O">Oeste</option>
+          </select>
+      <br>
+      <h2>Ingresar movimientos</h2>
+          Izquierda:I
+          <br>  
+          Derecha:D
+          <br>
+          Avanzar:A
+          <br>
+
+      <p><input class= "form-control" type="text" name ="movimientos" placeholder ="Escribe tus movimientos : AIDDAII"></p>
+     
+        <input class="btn btn-primary" type="submit" value ='Simular'>
+    </form>
+      
+
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
