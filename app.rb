@@ -36,15 +36,14 @@ post '/resultado2' do
     @sentidoInicial2 = params[:sentido2]  
     @movimientos2=params[:movimientos2]  
     auto = Auto.new 
-    auto.ingresarDatos(@xInicial,@yInicial,@sentidoInicial,@movimientos)       	
+    auto2 = Auto.new 
+    auto.ingresarDatos(@xInicial,@yInicial,@sentidoInicial,@movimientos)    
+    auto2.ingresarDatos(@xInicial2,@yInicial2,@sentidoInicial2,@movimientos2)    
     @vec = auto.mover()
+    @vec2 = auto2.mover()
     @x=@vec[0]
     @y=@vec[1]
     @ori=@vec[2]    
-   
-    auto2 = Auto.new 
-    auto2.ingresarDatos(@xInicial2,@yInicial2,@sentidoInicial2,@movimientos2)       	
-    @vec2 = auto2.mover()
     @x2=@vec2[0]
     @y2=@vec2[1]
     @ori2=@vec2[2]  
@@ -57,7 +56,7 @@ get '/obtenerCan' do
     erb:obtenerCan
 end
 
-post '/jugar' do
+get '/jugada' do
 
     @cantidad=params[:cantidad]
 
