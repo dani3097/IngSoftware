@@ -25,7 +25,7 @@ get '/jugar2' do
     erb:jugar2
 end
    
-post '/jugar2' do
+post '/resultado2' do
     @xInicial = params[:posicionX]
     @yInicial = params[:posicionY]     
     @sentidoInicial = params[:sentido]  
