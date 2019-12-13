@@ -55,7 +55,7 @@ RSpec.describe Auto do
         @auto.ingresarDatos(7,3,"S","DAAAADAIA")
         expect(@auto.mover()).to match_array([2,4,"O"])
      end
-   
+     it "Deberia mostrar resultado" do
         @auto.ingresarDatos(1,2,"N","IAIAIAIAA")
         expect(@auto.mover()).to match_array([1,3,"N"])
      end

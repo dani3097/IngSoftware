@@ -1,6 +1,6 @@
 Feature: 
 Como jugador 
-Quiero introducir el comando avanzar del auto 2
+Quiero introducir el comando avanzar del auto 1
 Para que el auto avance una posicion segun su direccion
 
 Scenario:

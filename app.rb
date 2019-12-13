@@ -43,8 +43,8 @@ post '/resultado2' do
     @yInicial2 = params[:posicionY2]     
     @sentidoInicial2 = params[:sentido2]  
     @movimientos2=params[:movimientos2]  
-    auto = Auto.new 
-    auto2 = Auto.new 
+    auto = Auto.new(Integer(params[:cols]), Integer(params[:filas])) 
+    auto2 = Auto.new(Integer(params[:cols]), Integer(params[:filas])) 
     auto.ingresarDatos(@xInicial,@yInicial,@sentidoInicial,@movimientos)    
     auto2.ingresarDatos(@xInicial2,@yInicial2,@sentidoInicial2,@movimientos2)    
     @vec = auto.mover()
