@@ -20,3 +20,4 @@ Scenario:
     Given visito la pagina jugar
     When lleno el campo "sentido" con "N"
     Then veo el valor "N" en el campo "sentido"
+    
