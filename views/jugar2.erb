@@ -15,8 +15,7 @@
           <h1 class="display-4">Ingresar datos</h1>
         </div>
     </div>
-    <form class="form-group" method="post" action="/resultado">
-    
+    <form class="form-group" method="post" action="/resultado2">
     <div class="container">
       <h2>Ingresar dimensiones del terreno</h2>
       <label>Cantidad de filas</label>
@@ -25,7 +24,7 @@
       <label>Cantidad de columnas</label>
       <input type="number" id='cols' name='cols'>
       <br>
-      <h2>Ingresar posicion inicial</h2>
+      <h2>Ingresar posicion inicial auto 1</h2>
       <label>Posicio X</label>
       <input type= "number" id ='posicionX' name ='posicionX'>
       <br>
@@ -47,8 +46,34 @@
           <br>
           Avanzar:A
           <br>
+        <p><input class= "form-control" type="text" name ="movimientos" placeholder ="Escribe tus movimientos : AIDDAII"></p>
 
-      <p><input class= "form-control" type="text" name ="movimientos" placeholder ="Escribe tus movimientos : AIDDAII"></p>
+
+    <br>
+<h2>Ingresar posicion inicial auto 2</h2>
+      <label>Posicio X</label>
+      <input type= "number" id ='posicionX2' name ='posicionX2'>
+      <br>
+      <label>Posicion Y</label>
+      <input type "number" id ='posicionY2' name ='posicionY2'>
+      <br>
+      <label>Sentido</label>
+          <select id ='sentido2' name ='sentido2'>
+            <option value="N">Norte</option>
+            <option value="S">Sur</option>
+            <option value="E">Este</option>
+            <option value="O">Oeste</option>
+          </select>
+      <br>
+      <h2>Ingresar movimientos</h2>
+          Izquierda:I
+          <br>  
+          Derecha:D
+          <br>
+          Avanzar:A
+          <br>
+<p><input class= "form-control" type="text" name ="movimientos2" placeholder ="Escribe tus movimientos : AIDDAII"></p>
+
      
         <input class="btn btn-primary" type="submit" id="#Simular" value ='Simular'>
     </form>

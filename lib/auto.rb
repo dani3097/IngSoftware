@@ -57,13 +57,13 @@ class Auto
                 end
             end
             if @movimientos[i]=='A'
-                if @sentidoInicial=='N' && @yInicial < @limiteY 
+                if @sentidoInicial=='N' && Integer(@yInicial) < Integer(@limiteY) 
                     @yInicial=@yInicial.to_i + 1
                 elsif @sentidoInicial=='O' && Integer(@xInicial) > 0
                     @xInicial=@xInicial.to_i - 1
                 elsif @sentidoInicial=='S' && Integer(@yInicial) > 0
                     @yInicial=@yInicial.to_i - 1
-                elsif @sentidoInicial=='E'&& @xInicial < @limiteX
+                elsif @sentidoInicial=='E'&& Integer(@xInicial) < Integer(@limiteX)
                     @xInicial=@xInicial.to_i + 1
                 end
             end
