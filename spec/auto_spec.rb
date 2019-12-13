@@ -1,7 +1,7 @@
 require './lib/auto'
 RSpec.describe Auto do
     before (:each) do
-        @auto=Auto.new()
+        @auto=Auto.new(10, 10)
     end
     it "Deberia mostrar 0 para la posicion inicial en X" do
        @auto.ingresarDatos(0,0,"N","ADDIA")
@@ -56,4 +56,22 @@ RSpec.describe Auto do
         expect(@auto.mover()).to match_array([2,4,"O"])
      end
    
+        @auto.ingresarDatos(1,2,"N","IAIAIAIAA")
+        expect(@auto.mover()).to match_array([1,3,"N"])
+     end
+     it "Deberia mostrar quedarse en la misma posicion si el auto trata de moverse fuera de
+         las dimensiones del terreno" do
+         @auto.ingresarDatos(0,0, "N", "IAAADDDAA");
+         expect(@auto.mover()).to match_array([0,0,"S"])
+      end
+      it "Deberia mostrar quedarse en la misma posicion si el auto trata de moverse fuera de
+         las dimensiones del terreno" do
+         @auto.ingresarDatos(10,10, "N", "AADAA");
+         expect(@auto.mover()).to match_array([10,10,"E"])
+      end
+    # it "Deberia mostrar posicion inicial en X" do
+    #     auto1=Auto.new
+    #     auto1.ingresarDatos(0,0,"N","AIDDAI")
+    #     expect(auto1.obtenerPosicionX().to eq "0")
+    # end
 end

@@ -1,26 +1,33 @@
 class Auto
 
-    def inicializar()
+    def initialize(lx, ly)
         @xInicial = 0
         @yInicial = 0
         @sentidoInicial = ''
         @movimientos= ''
+        @limiteX = lx
+        @limiteY = ly
     end
+
     def ingresarDatos(x,y,s,m)
         @xInicial = x
         @yInicial = y
         @sentidoInicial = s
         @movimientos= m
     end
+
     def obtenerX()
         @xInicial
     end
+
     def obtenerY()
         @yInicial
     end
+
     def obtenerSentido()
         @sentidoInicial
     end
+    
     def obtenerMovimientos()
         @movimientos
     end 
@@ -50,13 +57,13 @@ class Auto
                 end
             end
             if @movimientos[i]=='A'
-                if @sentidoInicial=='N'
+                if @sentidoInicial=='N' && @yInicial < @limiteY 
                     @yInicial=@yInicial.to_i + 1
-                elsif @sentidoInicial=='O'
+                elsif @sentidoInicial=='O' && Integer(@xInicial) > 0
                     @xInicial=@xInicial.to_i - 1
-                elsif @sentidoInicial=='S'
+                elsif @sentidoInicial=='S' && Integer(@yInicial) > 0
                     @yInicial=@yInicial.to_i - 1
-                elsif @sentidoInicial=='E'
+                elsif @sentidoInicial=='E'&& @xInicial < @limiteX
                     @xInicial=@xInicial.to_i + 1
                 end
             end
